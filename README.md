@@ -45,7 +45,7 @@ var save_manager : SaveManager
 func _get_save_game() -> void:
 	save_manager = SaveManager.new()
 
-    save_file = save_manager.get_save_file(save_path)
+    var save_file = save_manager.get_save_file(save_path)
 ```
 When the fetching is done, you can assign the data to objects inside your game.
 ```gdscript
@@ -55,7 +55,7 @@ var save_manager : SaveManager
 func _get_save_game() -> void:
 	save_manager = SaveManager.new()
 
-    save_file = save_manager.get_save_file(save_path)
+    var save_file = save_manager.get_save_file(save_path)
 	if save_file == true:
 		save_manager.get_save_game(save_path)
 		# Assign loaded values.
