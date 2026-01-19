@@ -1,7 +1,7 @@
 # SaveSystem
-An easy-to-use save system build for the Godot game engine. This system is based on a similar system used by KoBeWi's [Metroidvania System](https://github.com/KoBeWi/Metroidvania-System). While it is mainly used for metroidvania, it can be sued for other kinds of games as well.
+An easy-to-use save system build for the Godot game engine. This system is based on a similar system used by KoBeWi's [Metroidvania System](https://github.com/KoBeWi/Metroidvania-System). While it is mainly used for metroidvania, it can be used for other kinds of games as well.
 
-Support Godot **4.5** or newer.
+Supports Godot **4.5** or newer.
 
 ## Overview
 This system allows for easy and quick save/load of games. Creating and implementing a save system can be tedious and time consuming, which is why I build a system that simplifies that concept and that can be used by others as well.
