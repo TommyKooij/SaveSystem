@@ -2,8 +2,9 @@ extends RefCounted
 class_name SaveSystem
 
 ## Each created save instance will be stored at this location.
-const SaveData = preload("res://SaveSystem/save_data.gd")
+const SaveData = preload("res://addons/SaveSystem/save_data.gd")
 # "user://save_data/"
+## The user folder can be accessed by pressing [Project] and [Open User Data Folder] in the header.
 const SAVE_PATH := "user://game_data/"
 
 var save_data : SaveData
@@ -15,7 +16,6 @@ func _init() -> void:
 	set_save_data()
 
 
-## ALERT: Currently this function does not work, as save_data is not an Dictionary.
 ## Stores the value inside the internal [SaveFile] dictionary.
 func set_value(field : String, value : Variant) -> void:
 	data[field] = value
@@ -42,14 +42,14 @@ func set_save_data() -> void:
 
 
 ## Stores the save data of a Game object. Allows for easier storage of game data.
-func store_game(Zhoyd) -> void:
-	data["_Zhoyd_"] = Zhoyd.get_save_data()
+func store_game(Game) -> void:
+	data["_Game_"] = Game.get_save_data()
 
 
 ## Retrieves save data of a Game object.
-func retrieve_game(Zhoyd) -> void:
-	var game_data : Dictionary = data.get("_Zhoyd_", {})
-	Zhoyd.set_save_data(game_data)
+func retrieve_game(Game) -> void:
+	var game_data : Dictionary = data.get("_Game_", {})
+	Game.set_save_data(game_data)
 
 
 ## Creates a new [SaveFile] for the current running game instance.
